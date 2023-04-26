@@ -16,6 +16,22 @@
 
 }
 
+.primaryNavigation__form{
+    padding: 1rem;
+    position: relative;
+}
+
+.primaryNavigation__searchIcon{
+    position: absolute;
+    top: 1.125rem;
+    left: 1.125rem;
+}
+
+.primaryNavigation__search{
+    padding: 0.25rem 0.25rem 0.25rem 2rem;
+    width: 100%;
+}
+
 .primaryNavigation__menu {
     padding: 1em;
     list-style: none;
@@ -29,4 +45,39 @@
 .burgerMenuButton {
     border: none;
     background-color: transparent;
+}
+
+@media screen and (min-width: 768px){
+    .burgerMenuButton{
+        display: none;
+    }
+
+    .primaryNavigation{
+        position: static;
+        transform: none;
+        transition: none;
+        
+        height: auto;
+        width: auto;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .primaryNavigation__form{
+        padding: 0;
+    }
+
+    .primaryNavigation__menu{
+        display: flex;
+        padding:0;
+        gap: 1.5em;
+    }
+
+    .primeryNavigation__search{
+        padding: 0.125rem 0.25rem 0.125rem 2rem;
+    }
+    .primaryNavigation__searchIcon{
+        top:0.125rem;
+        left:0.125rem;
+    }
 }

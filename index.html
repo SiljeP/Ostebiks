@@ -17,6 +17,10 @@
         </button>
         <nav class="primaryNavigation" aria-hidden="true">
             <a href="#content" class="sr-only">Spring til indholdet</a>
+            <form class="primaryNavigation__form">
+                <i class="primaryNavigation__searchIcon" data-feather="search"></i>
+                <input class="primaryNavigation__search" type = "search" name="searchbar" placeholder="Find din ost her...">
+            </form>
             <menu class="primaryNavigation__menu">
                 <li class="primaryNavigation__menuItem"><a href="#" class="primaryNavigation__link">Link 1</a></li>
                 <li class="primaryNavigation__menuItem"><a href="#" class="primaryNavigation__link">Link 2</a></li>
@@ -44,6 +48,21 @@
         </section>
 
     </main>
+    <footer class="footer">
+        <form>
+            <label for="inputName">Navn</label>
+            <input id="inputName" class="footer__input" type="text" name="navn" placeholder="F.eks Brian">
+            <input id="inputEmail" class="footer__input" type="email" name="email" placeholder="F.eks osteelskeren@ostebiks.dk">
+            <input id="inputNumber" class="footer__input" type="number" name="tlf" placeholder="F.eks 10203040">
+            
+
+        </form>
+
+        <h4>© Brians ostebiks 2023  </h4>
+        <p> Ostevejen 13
+            6666, Ostemånen
+        </p>
+    </footer>
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
