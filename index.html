@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 
     <title>Brian's ostebiks</title>
 </head>
+
 <body>
     <header class="siteHeader">
         <a href="./" class="siteHeader__brand">Brians Ostebiks</a>
@@ -19,7 +21,8 @@
             <a href="#content" class="sr-only">Spring til indholdet</a>
             <form class="primaryNavigation__form">
                 <i class="primaryNavigation__searchIcon" data-feather="search"></i>
-                <input class="primaryNavigation__search" type = "search" name="searchbar" placeholder="Find din ost her...">
+                <input class="primaryNavigation__search" type="search" name="searchbar"
+                    placeholder="Find din ost her...">
             </form>
             <menu class="primaryNavigation__menu">
                 <li class="primaryNavigation__menuItem"><a href="#" class="primaryNavigation__link">Link 1</a></li>
@@ -32,43 +35,62 @@
         <section class="highlights">
             <article class="highlights__article">
                 <img class="highlights__image" src="https://placebear.com/640/360" alt="Tilfældig billede af en bjørn">
-                <h1 class="highlights__heading"  >Ost med ost på</h1>
-                <p class="highlights__text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, quidem.</p>
+                <h1 class="highlights__heading">Ost med ost på</h1>
+                <p class="highlights__text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, quidem.
+                </p>
             </article>
             <article class="highlights__article">
                 <img class="highlights__image" src="https://placebear.com/640/360" alt="Tilfældig billede af en bjørn">
-                <h1 class="highlights__heading"  >Ost med ost på</h1>
-                <p class="highlights__text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, quidem.</p>
+                <h1 class="highlights__heading">Ost med ost på</h1>
+                <p class="highlights__text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, quidem.
+                </p>
             </article>
             <article class="highlights__article">
                 <img class="highlights__image" src="https://placebear.com/640/360" alt="Tilfældig billede af en bjørn">
-                <h1 class="highlights__heading"  >Ost med ost på</h1>
-                <p class="highlights__text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, quidem.</p>
+                <h1 class="highlights__heading">Ost med ost på</h1>
+                <p class="highlights__text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, quidem.
+                </p>
             </article>
         </section>
-
     </main>
-    <footer class="footer">
-        <form>
-            <label for="inputName">Navn</label>
-            <input id="inputName" class="footer__input" type="text" name="navn" placeholder="F.eks Brian">
-            <input id="inputEmail" class="footer__input" type="email" name="email" placeholder="F.eks osteelskeren@ostebiks.dk">
-            <input id="inputNumber" class="footer__input" type="number" name="tlf" placeholder="F.eks 10203040">
-            
 
+    <footer class="footer">
+        <form class="footer__form" action="index.html">
+            <div class="form__field">
+                <label for="inputName">Navn: </label>
+                <input id="inputName" class="form__input" type="text" name="navn" placeholder="F.eks Brian">
+                <span class="form__message"></span>
+            </div>
+            <div class="form__field">
+                <label for="inputEmail">Email: </label>
+                <input id="inputEmail" class="form__input" type="email" name="email"
+                    placeholder="F.eks osteelskeren@ost.dk">
+                <span class="form__message"></span>
+            </div>
+            <div class="form__field">
+                <label for="inputNumber">Tlf: </label>
+                <input id="inputNumber" class="form__input" type="number" name="tlf" placeholder="F.eks 10203040">
+                <span class="form__message"></span>
+            </div>
+            <div class="form__submit">
+                <input class="form__submitButton" type="submit" value="Send">
+            </div>
         </form>
 
-        <h4>© Brians ostebiks 2023  </h4>
-        <p> Ostevejen 13
-            6666, Ostemånen
-        </p>
+        <section class="footer__copyright">
+        <h4>© Brians Ostebiks 2023 </h4>
+        <p class="footer__adress" >Ostevejen 13,
+            6666, Ostemånen</p>
+        </section>
     </footer>
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         feather.replace();
     </script>
-
+    <script src="./assets/scripts/contact.js" defer></script>
     <script src="./assets/scripts/burgermenu.js" defer></script>
+    
 </body>
+
 </html>
