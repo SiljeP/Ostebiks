@@ -3,17 +3,21 @@ const FORM_INPUT_NAME = FORM.querySelector("#inputName");
 const FORM_INPUT_EMAIL = FORM.querySelector("#inputEmail");
 const FORM_INPUT_TLF = FORM.querySelector("#inputNumber");
 
+const FORM_SPAN = FORM.querySelectorAll(".form__message");
+
+
+//viser et fejl kryds hvis feltet ikke er udfyld når man trykker submit
 FORM.addEventListener("submit", function (event) {
     event.preventDefault();
 
     if (FORM_INPUT_NAME.value == ""){
-        alert("navn er ikke udfyldt")
-    }
-    else if (FORM_INPUT_TLF.value == ""){
-        alert("tlf er ikke udfyldt")
+        FORM_SPAN[0].innerHTML = "❌"
     }
     else if (FORM_INPUT_EMAIL.value == ""){
-        alert("email ikke udfyldt")
+        FORM_SPAN[1].innerHTML = "❌"
+    } 
+    else if (FORM_INPUT_TLF.value == ""){
+        FORM_SPAN[2].innerHTML = "❌"
     }
     else{
         FORM.submit()
@@ -28,6 +32,8 @@ FORM.addEventListener("submit", function (event) {
 const URL_STRING = window.location.href
 const URL_OBJECT = new URL (URL_STRING)
 
+//if sætningen herunder viser en thank you message der bruger informationer fra formen. 
+//navn og tlf nummer stammer fra name attributten i input feltet html
 if(URL_OBJECT.searchParams.get("navn")){
     let userName = URL_OBJECT.searchParams.get("navn")
     let userPhone = URL_OBJECT.searchParams.get("tlf")

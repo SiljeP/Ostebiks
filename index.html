@@ -55,25 +55,37 @@
     </main>
 
     <footer class="footer">
-        <form class="footer__form" action="index.html">
+        <!-- no validate er vigtigt når vi laver vores egen validering i js -->
+        <form class="footer__form" action="index.html" novalidate >
             <div class="form__field">
-                <label for="inputName">Navn: </label>
-                <input id="inputName" class="form__input" type="text" name="navn" placeholder="F.eks Brian">
+                <label class="input__label">Navn:
+                    <input id="inputName" class="form__input" type="text" name="navn" placeholder="F.eks Brian" required>
+                </label>
                 <span class="form__message"></span>
             </div>
             <div class="form__field">
-                <label for="inputEmail">Email: </label>
-                <input id="inputEmail" class="form__input" type="email" name="email"
-                    placeholder="F.eks osteelskeren@ost.dk">
+                <label class="input__label">Email:
+                    <input id="inputEmail" class="form__input" type="email" name="email"
+                    placeholder="F.eks osteelskeren@ost.dk" required>
+                </label>
                 <span class="form__message"></span>
             </div>
             <div class="form__field">
-                <label for="inputNumber">Tlf: </label>
-                <input id="inputNumber" class="form__input" type="number" name="tlf" placeholder="F.eks 10203040">
+                <label class="input__label">Tlf: 
+                    <input id="inputNumber" class="form__input" type="number" name="tlf" placeholder="F.eks 10203040" required>
+                </label>
+                <span class="form__message"></span>
+            
+            </div>
+            <!-- Hvis man skal bruge flere linjer i et felt brug textarea i stedet for input type text (godt fordi html5 validering, autoudførelse fra brugeren, nemt for os ift datahåndtering, forskellige tasteturer på mobilen ) -->
+            <div class="form__field">
+                <label  class="input__label">Besked:
+                    <textarea class="form__input" placeholder="F.eks. Jeg vil gerne bestille 2 kg ost" required></textarea>
+                </label>
                 <span class="form__message"></span>
             </div>
             <div class="form__submit">
-                <input class="form__submitButton" type="submit" value="Send">
+                <button class="form__submitButton" type="submit">Send</button>
             </div>
         </form>
 
@@ -88,7 +100,8 @@
     <script>
         feather.replace();
     </script>
-    <script src="./assets/scripts/contact.js" defer></script>
+    <!-- <script src="./assets/scripts/contact.js" defer></script> -->
+    <script src="./assets/scripts/contactForm.js"></script>
     <script src="./assets/scripts/burgermenu.js" defer></script>
     
 </body>
