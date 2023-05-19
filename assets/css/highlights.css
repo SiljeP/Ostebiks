@@ -1,19 +1,5 @@
 .highlights {
-    margin-top: 1em;
-
-}
-
-.highlights__article:not(:last-of-type) {
-    margin-bottom: 2em;
-}
-
-.highlights__heading, .highlights__text {
-    padding: 0 1em;
-}
-
-.highlights__image {
-    width: 100%;
-    height: auto;
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -22,10 +8,21 @@
         flex-direction: row;
         gap: 0.5rem;
         margin: auto;
+        margin-top: 1em;
     }
 
     .highlights__article {
         background-color: antiquewhite;
         margin-bottom: 2em;
+    }
+
+    .highlights__image {
+        width: 100%;
+        height: auto;
+    }
+
+    .highlights__heading,
+    .highlights__text {
+        padding: 0 1em;
     }
 }
